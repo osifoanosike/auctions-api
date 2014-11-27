@@ -27,6 +27,11 @@ module Api
 			  	end
 			end
 
+			def show
+				@auction = AuctionItem.find_by(id: params[:id])
+				render json: @auction
+			end
+
 			private
 
 				def auction_params
