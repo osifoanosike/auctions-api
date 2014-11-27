@@ -1,3 +1,8 @@
 class AuctionSerializer < ActiveModel::Serializer
-  attributes :id
+  
+  embed :id
+
+  attributes :id, :code, :name, :desscription, :status, :quantity
+
+  has_one :user
 end
