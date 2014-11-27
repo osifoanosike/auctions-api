@@ -18,7 +18,7 @@ module Api
 
 			    @auctionItem = AuctionItem.new(params[:id])
 			  	# @auctionItem = @current_user.auction_items.build(auction_params)
-			  	@auctionItem.user_id = current_user.id
+			  	@auctionItem.user_id = @current_user.id
 			    @auctionItem.absolute_url =  "#{request.protocol}#{request.host_with_port}#{ @auctionItem.image}"
 			    
 			  	if @auctionItem.save
